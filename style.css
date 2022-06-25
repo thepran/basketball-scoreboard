@@ -84,6 +84,7 @@ h1 {
 .team-column h2 {
   font-size: 3rem;
   color: #e0dbd2;
+  display: inline-block;
 }
 .team-column h2,
 .team-score-increment button {
