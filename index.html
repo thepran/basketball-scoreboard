@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BasketBall Score Board</title>
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Score Board</h1>
+      <div class="score-container">
+        <div class="team-column">
+          <h3>Home</h3>
+          <div class="team-score">
+            <h2 id="home-team-score"></h2>
+          </div>
+          <div class="team-score-increment">
+            <button onclick="increase('home',1)">+1</button>
+            <button onclick="increase('home',2)">+2</button>
+            <button onclick="increase('home',3)">+3</button>
+          </div>
+        </div>
+        <div class="team-column">
+          <h3>Guest</h3>
+          <div class="team-score">
+            <h2 id="guest-team-score"></h2>
+          </div>
+          <div class="team-score-increment">
+            <button onclick="increase('guest',1)">+1</button>
+            <button onclick="increase('guest',2)">+2</button>
+            <button onclick="increase('guest',3)">+3</button>
+          </div>
+        </div>
+      </div>
+      <div class="additional-button-container">
+        <button onclick="newGame()">New Game</button>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

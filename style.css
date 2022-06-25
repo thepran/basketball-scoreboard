@@ -1,0 +1,170 @@
+@import url("https://fonts.cdnfonts.com/css/not-just-groovy");
+@import url("https://fonts.cdnfonts.com/css/digital-7-mono");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&family=Satisfy&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  background: url("https://images.unsplash.com/photo-1627627256672-027a4613d028?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=874&q=80");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #382872b9;
+  height: 100vh;
+  color: white;
+}
+.container::before {
+  content: "";
+  position: absolute;
+  background: url("https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=890&q=80");
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+}
+h1 {
+  font-size: 40px;
+  margin-bottom: 1 rem;
+  font-family: "Not Just Groovy", sans-serif;
+
+  color: #bbb1b1;
+}
+.score-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1rem;
+  gap: 1.5rem;
+  margin: 1rem 0;
+}
+.additional-button-container {
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+.additional-button-container button {
+  width: 150px;
+}
+
+.team-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.team-column h3 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-family: "Rubik", sans-serif;
+}
+.team-column .team-score {
+  background-color: black;
+  width: 5rem;
+  text-align: center;
+  margin-bottom: 0.8rem;
+  padding: 2px;
+  border-radius: 5px;
+}
+.team-column h2 {
+  font-size: 3rem;
+  color: #e0dbd2;
+}
+.team-column h2,
+.team-score-increment button {
+  font-family: "Digital-7 Mono", sans-serif;
+  font-family: "Digital-7", sans-serif;
+  font-family: "Digital-7 Italic", sans-serif;
+}
+button {
+  background-color: transparent;
+  outline: none;
+  border: 1px solid #61bcd8;
+  color: #61bcd8;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+button:hover {
+  /* border: 1px solid #556f77; */
+  color: #382872b9;
+  background-color: #61bcd8;
+}
+
+.blink {
+  animation: blink 1.5s linear infinite;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (min-width: 320px) {
+  .team-column .team-score {
+    width: 8rem;
+  }
+  .team-column h2 {
+    font-size: 5rem;
+  }
+}
+@media (min-width: 560px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container {
+    position: absolute;
+    width: 500px;
+    height: unset;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  .container::before {
+    position: absolute;
+    border-radius: 10px;
+  }
+  body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(209, 200, 200, 0.767);
+    z-index: -1;
+    left: 0;
+    background-attachment: fixed;
+    overflow-y: hidden;
+  }
+}
+
+@media (min-width: 560px) and (max-height: 549px) {
+  body::before {
+    height: 550px;
+  }
+}
